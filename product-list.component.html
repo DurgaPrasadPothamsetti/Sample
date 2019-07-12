@@ -1,0 +1,58 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <style type="text/css">
+                .bs-example{
+                    margin: 20px;
+                }
+            </style>
+    </head>
+<body>
+    
+        
+     
+
+    <h1>Our Product List</h1>
+
+
+        <table  class="table table-light">
+                
+                <tr id="except">
+                    <th><button type="button" class="btn btn-info">Show Image</button></th>
+                    <th colspan="7" id="filter"  >Filter:<input [(ngModel)]='name' name="" type="text" size="25">&nbsp;<i class="fa fa-search"></i></th>
+                </tr>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Code</th>
+                    <th>Available</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                    <th>Image</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr *ngFor="let product of products | productFilterPipe:name" >
+            
+            
+            
+                    <td> <a id="a" routerLinkActive='active' [routerLink]="['/products', product.productId]">{{ product.productName }}</a></td>
+                    <td>{{ product.productCode }}</td>
+                    <td>{{ product.releaseDate}}</td>
+                    <td>${{ product.price}}</td>
+                    <td><app-star-component [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></app-star-component></td>
+                    <td><img src="{{ product.imageUrl }}" width="40px" height="40px"></td>
+                    <td><button type="button" class="btn btn-info" [routerLink]="['/edit']">Edit</button></td>
+                    <td><button type="button" class="btn btn-info" >Delete</button></td>
+                </tr>
+            
+            </table>
+<h2 style="text-align: center;">{{someMessege}}</h2>
+           
+</body>
+</html>

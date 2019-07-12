@@ -1,0 +1,126 @@
+tr{
+  background-color: #000000;
+
+}
+td{
+  color: white;
+}
+th{
+  color: white;
+}
+#a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+#a:hover{
+  text-decoration: none;
+}
+.button-two {
+  border-radius: 4px;
+  background-color:#000000;
+  color: aliceblue;
+
+  border: none;
+  padding-top: 2px;
+  padding-bottom: 30px;
+  width: 200px;
+  height: 20px;
+  transition: all 0.5s;
+}
+#filter{
+  padding-left: 0px;
+  margin-left: 0px;
+}
+table{
+  top: 0px;
+  box-shadow: 1px 1px 10px rgb(46, 46, 46);
+  
+}
+h1{
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  color: black;
+  margin-bottom: 50px;
+}
+
+.button-two span {
+  cursor: pointer;
+  display: inline-block;
+  position: sticky;
+  transition: 0.5s;
+  text-align: center;
+  padding:0;
+}
+
+.btn-info:after {
+  content: '>>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  
+  transition: 0.5s;
+}
+
+.button-two:hover span {
+  padding-right: 25px;
+}
+
+.button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+body{
+  
+  background-repeat: no-repeat;
+  padding: 100px;
+  margin: 0;
+}
+
+  /*
+  #reset{
+    background-color: #4CAF50; /* Green 
+    border: none;
+    color: white;
+    padding: 3px 15px;  
+  }
+  span{
+      color: red;
+  }
+  .div{
+      display: inline-block;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
+   
+    
+  }
+  a{
+    display: inline-block;
+  }
+  .shw{
+    float: right;
+  }
+  td,th{
+    width: 20px;
+    height: 10px;
+  }
+  .filter{
+      display: inline-block;
+  }
+  table{
+      margin: 30px;
+  }*/
+
+  
+  
+ 
